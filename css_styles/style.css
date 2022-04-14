@@ -1,0 +1,134 @@
+body{
+    background: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#333;
+  font-size:1.3rem;
+  line-height: 1.6rem;
+  margin: 0%;  /*El body trae un margen arriba y por el lado, normalizar el body, se arregla con el 0*/
+}
+
+h1{
+    line-height: 1.3rem;
+    font-size: 2rem;
+}
+
+p{
+    margin-bottom: 1.6em;
+}
+
+.container{
+    width: 85%;
+    max-width: 850%;
+    margin: 0 auto;
+}
+
+.header{
+    background: rgb(36, 36, 48);
+    color: white;
+    padding: 2rem; /*   relleno del header  */
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+}
+  .header a{
+      color: white;
+      text-decoration: none;
+  }
+
+
+.logo-nav-container{
+    display: flex;   /*Reemplaza el foat, haciendo que el elementos se mueva/flote */
+    justify-content: space-between;
+    align-items: center; /* alinear al centro*/
+    flex-wrap: wrap; /*Tiene mas ancho que lepermite, que lo pase para abajo*/
+}
+
+.logo {
+    letter-spacing: 15px;
+    font-size: 1.3em;
+    transition: all 0.4s linear; /*Cuando el mouse pase por la lista, tendra un pequeño delay la aparicion de tenerlos elecionado*/
+    border-radius: 5px;
+   
+}
+
+.logo:hover { /*cuando el mouse pase por encima cambia de color la lista*/
+    background: #4a4a4a;
+}
+
+.menu {
+    display: none;
+}
+
+.foto1 { 
+    padding: 5px;
+    margin: 10px;  
+    float: right; 
+    width: 500px;
+ }
+
+
+.navigation ul {   /* todos los ul  que tengan un margen 0, paddin 0, list-style none, no tengan elementos de lista(viñeta) */
+       margin: 0;
+       padding: 0;
+       list-style: none;
+}
+
+ .navigation ul li{
+    display: inline-block; /* que esten uno al lado de otro*/
+    
+ }
+ .navigation ul li a{ /* Que se muesten en block */
+     display: block;
+     padding: 0.5rem 1rem;
+     transition: all 0.4s linear; /*Cuando el mouse pase por la lista, tendra un pequeño delay la aparicion de tenerlos elecionado*/
+     border-radius: 5px;
+
+ }
+
+ .main{ /* Se creo este main, para hacer un padding hacia arriba, ya que se un position fixed con right,left, top0 haciendolo movil, prod
+     duciendo que el texto de abajo suba*/
+     padding-top: 10rem;
+ }
+ .navigation ul li a:hover { /*cuando el mouse pase por encima cambia de color la lista*/
+     background: #4a4a4a;
+ }
+
+
+footer{
+    background: #f2f2f2;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 6rem;
+
+}
+
+@media only screen and(max-width:767px){
+
+    .navigation{
+        width: 100%;
+        margin-top: 1rem;  /*Para que no quede tan pegado al logo*/
+    }
+    .navigation ul{
+        display: none;
+    }
+    .navigation ul.show{
+        display: block;
+    }
+    .navigation ul li{
+        display: block; 
+        
+     }
+     .navigation ul li a{ /* Que se muesten en block */
+         display: block;
+         padding: 0.5rem 0rem   ;
+         transition: all 0.4s linear; /*Cuando el mouse pase por la lista, tendra un pequeño delay la aparicion de tenerlos elecionado*/
+         border-radius: 5px;
+    
+     }
+
+     .navigation ul li a:hover { /*cuando el mouse pase por encima cambia de color la lista*/
+        background: #4a4a4a;
+    }
+   
+}
